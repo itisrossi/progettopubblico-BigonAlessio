@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <h1>Funzioni Ricorsive</h1>
+<hr>
 <body>
+<p>Sorteggio con funzioni ricorsive:</p>
 <script>
     function swap(arr, i, j) 
     {   
@@ -58,7 +60,20 @@ document.write("Orginal array:" + arr);
 quickSort(arr, 0, n - 1);
 document.write("Sorted array:"+arr);
 </script>
-<p id='demo'></p>
+<hr>
+<p>Sorteggio con il comando ".sort":</p>
+<script>
+    let arr2 = [-9, 8, 2, 5, 4, 23, 7, -6, 4];
+    document.write("Original Sort" + arr2);
+</script>
+<br>
+<script>
+    arr2.sort(function(a, b){return a - b});
+    document.write("Final Sort" + arr2);
+</script>
+<hr>
+<p>Usare un codice lunghissimo invece che due righe essere tipo:</p><br>
+<img src=Images/aneurysm-hhhhomeboyyyy.gif>
 </body>
 
 </html>
