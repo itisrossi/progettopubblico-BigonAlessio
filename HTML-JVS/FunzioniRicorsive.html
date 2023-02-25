@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>Funzioni Ricorsive</head>
+<body>
+<script>
+    function posizMin(v, inizio, fine)
+    {
+        let min = v[inizio];
+        for(let i = inizio + 1; i < fine; i++)
+        {
+            if (min > v[i])
+            {
+                min = v[i];
+                pos = i;
+            }
+        }
+        return pos;
+                      
+    }
+    function SelectionSort(v, inizio, fine)
+    {
+        let posizMin = 0;
+        if(inizio===fine)
+        {
+            return;
+        }
+        else
+        {
+            posMin = posizMin(v, inizio, fine);
+            swap(v, inizio, fine);
+            selectionSort(v, inizio + 1, fine);
+        }
+    }
+
+    function quickSort(v, inizio, fine)
+    {
+        let posizMin = 0;
+        if(inizio===fine)
+        {
+            return;
+        }
+        else
+        {
+            let pivot = v[inizio];
+            posPivot = partition(v, inizio, fine);
+            quickSort(v, inizio, fine);
+            quickSort(v, inizo + 1, fine);
+        }
+    }
+</script>
+<p id='demo'></p>
+</body>
+
+</html>
+
