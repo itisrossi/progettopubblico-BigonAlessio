@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form>
+        <label>Inserire i pesi per un montecarichi che ha portata massima di 65Kg</label><br><br>
+        <label for="carico1">Peso del primo carico</label><br>
+        <input type="number" id="carico1" name="carico1"><br>
+        <label for="carico1">Peso del secondo carico</label><br>
+        <input type="number" id="carico2" name="carico2"><br>
+        <label for="carico1">Peso del terzo carico</label><br>
+        <input type="number" id="carico3" name="carico3"><br><br>
+        <input type="button" onclick="Calcola()" value="Calcola"><br>
+        <p id="demo"></p>
+        <image src="Images/AmbitiousWillingLeopardseal-max-1mb.gif" id="im1">;
+        <image src="Images/immagini_divertenti_gif_30-6-21-6.gif" id="im2">;
+        <image src="Images/negfly.gif" id="im3">;
+    </form>
+<script>
+    document.getElementById("im1").style.visibility="hidden";
+    document.getElementById("im2").style.visibility="hidden";
+    document.getElementById("im3").style.visibility="hidden";
+    function Calcola()
+    {
+        var C1=parseInt(document.getElementById("carico1").value); 
+        var C2=parseInt(document.getElementById("carico2").value);  
+        var C3=parseInt(document.getElementById("carico3").value);
+
+        if (C1>0 && C2>0 && C3>0)
+        {
+            C1 += C2+C3;
+            if (C1>65)
+            {
+                document.getElementById("demo").innerHTML= "Il peso supera la portata massima";
+                document.getElementById("im1").style.visibility="visible";
+                document.getElementById("im2").style.visibility="visible";
+            }
+            else
+            {
+                document.getElementById("demo").innerHTML= "Il peso rientra nella portata massima";
+                document.getElementById("im3").style.visibility="visible";
+            }
+        }
+        else
+        {
+            document.getElementById("demo").innerHTML= "I carichi devono essere positivi" ;
+        }
+    }
+
+</script>
+</body>
+</html>

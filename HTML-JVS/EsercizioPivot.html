@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>Funzioni Ricorsive</head>
+<h1>Funzioni Ricorsive</h1>
+<hr>
 <body>
+<p>Sorteggio con funzioni ricorsive:</p>
 <script>
     function swap(arr, i, j) 
     {   
@@ -49,14 +51,41 @@ function printArray(arr, size)
 }
  
  
-let arr = [7, 2, 1, 6, 8, 5, 3, 4];
+let arr = [-9, 8, 2, 5, 4, 4, 7, -6, 4];
 let n = arr.length;
+<<<<<<< HEAD
  
 document.write("Orginal array:" + arr); 
+=======
+document.write("Orginal array:" + arr);
+const dStart = newDate();
+
+</script>
+<br>
+<script>
+>>>>>>> a3da05ea077ecf2abe6ef037f8bdf7d64708cc48
 quickSort(arr, 0, n - 1);
+let dEnd = newDate(); 
+let durataSlection = dEnd.getTime() - dStart.getTime();
 document.write("Sorted array:"+arr);
 </script>
-<p id='demo'></p>
+<hr>
+<p>Sorteggio con il comando ".sort":</p>
+<script>
+    let arr2 = [-9, 8, 2, 5, 4, 23, 7, -6, 4];
+    document.write("Original Sort" + arr2);
+</script>
+<br>
+<script>
+    arr2.sort(function(a, b){return a - b});
+    document.write("Final Sort" + arr2);
+</script>
+<hr>
+<p>Usare un codice lunghissimo invece che due righe essere tipo:</p><br>
+<img src=Images/aneurysm-hhhhomeboyyyy.gif>
+<img src=Images/quandale-quandale-dingle.gif>
+<img src=Images/dance.gif>
+<img src=Images/giphy.gif>
 </body>
 
 </html>
