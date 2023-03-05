@@ -15,27 +15,28 @@
         {
             mat[i] = new Array(n);
         }
-        let cassa = n;
-        for(let i=0, i=n; i++)
+        let box = n;
+        for(let i=0; i<n; i++)
         {
             let cavia = n;
             let k = 0;
-            if(cavia===cassa)
+            for(let i=0; i<n; i++)
             {
-                matrice[i]
+                if(cavia===box)
+                {
+                    matrice[i].fill(cavia, k, n);
+                    box = box - 1;
+                }
+                else
+                {
+                    matrice[i][k]=cavia;
+                    cavia = cavia - 1;
+                }
             }
         }
+
     }
 </script>
 <p id="demo"></p>
 </body>
 </html>
-
-4444 444
-4333 334
-4322 234
-4321 234
-
-4322 234
-4333 334
-4444 444
