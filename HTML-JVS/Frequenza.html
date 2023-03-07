@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+    <label>Inserisci una stringa a piacere di numeri e lettere.</label><br>
+    <input type="text" id="stringa"><br><br>
+    <button type="button" onclick=frequenza()>Calcola</button><br>
+    <p id="demo"></p>
+</form>
+<script>
+    
+
+    function frequenza()
+    {
+        let string = document.getElementById("stringa").value;
+        let v = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        for(let k=0; k<string.length; k++)
+        {
+            for(let i=0; i<=9; i++)
+            {
+                if(string[k]==i)
+                {   
+                    v[i] += 1;
+                }
+            }
+
+        }
+        document.getElementById("demo").innerHTML = v;
+    }
+</script>
+</body>
+</html>
